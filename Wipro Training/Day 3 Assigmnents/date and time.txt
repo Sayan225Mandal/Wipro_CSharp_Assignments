@@ -1,0 +1,27 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+internal class Program
+{
+    static void Main(string[] args)
+    {
+        // 1. Get date after 10 days from today's date
+        DateTime today = DateTime.Now;
+        DateTime futureDate = today.AddDays(10);
+        Console.WriteLine("Date after 10 days: " + futureDate);
+
+        // 2. Find out the number of days between two dates
+        DateTime startDate = new DateTime(2024, 7, 1);
+        DateTime endDate = new DateTime(2024, 7, 9);
+        TimeSpan difference = endDate - startDate;
+        int numberOfDays = difference.Days;
+        Console.WriteLine($"Number of days between startDate and endDate: " + numberOfDays);
+
+        // 3. Display the following format using ToString()
+        DateTime date = new DateTime(2024, 7, 9, 11, 28, 0);
+        string formattedDate = date.ToString("dddd, d MMMM, yyyy 'at' hh:mm tt");
+        Console.WriteLine("Formatted date: " + formattedDate);
+    }
+}

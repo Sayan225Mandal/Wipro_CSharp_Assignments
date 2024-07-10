@@ -1,0 +1,114 @@
+1. Sum of Digits of a Number
+
+Algorithm:
+
+1. Start
+2. Prompt the user to enter a number
+3. Initialize sum to 0
+4. While the number is greater than 0
+5. Get the last digit of the number (number % 10)
+6. Add the last digit to sum
+7. Remove the last digit from the number (number / 10)
+8. Print the sum
+9. End
+
+Pseudocode:
+
+START
+   PRINT "Enter a number: "
+   READ number
+   SET sum = 0
+   WHILE number > 0
+      SET digit = number % 10
+      SET sum = sum + digit
+      SET number = number 
+   END WHILE
+   PRINT "Sum of digits: ", sum
+END
+==========================================================================================
+
+2. Calculate the Area of a Rectangle, Square, and Circle
+
+Algorithm:
+
+1. Start
+2. For Rectangle:
+	Prompt the user to enter the length and width
+	Calculate the area as length * width
+	Print the area
+3. For Square:
+	Prompt the user to enter the side length
+	Calculate the area as side * side
+	Print the area
+4. For Circle:
+	Prompt the user to enter the radius
+	Calculate the area as π * radius * radius
+	Print the area
+5. End
+
+Pseudocode:
+
+START
+   Rectangle
+   PRINT "Enter the length of the rectangle: "
+   READ length
+   PRINT "Enter the width of the rectangle: "
+   READ width
+   SET area_rectangle = length * width
+   PRINT "Area of rectangle: ", area_rectangle
+   
+   Square
+   PRINT "Enter the side length of the square: "
+   READ side
+   SET area_square = side * side
+   PRINT "Area of square: ", area_square
+   
+   Circle
+   PRINT "Enter the radius of the circle: "
+   READ radius
+   SET area_circle = 3.14 * radius * radius
+   PRINT "Area of circle: ", area_circle
+END
+=============================================================================================
+
+3. Calculate the Average of 5 Marks
+
+Algorithm:
+
+1. Start
+2. Prompt the user to enter 5 marks
+3. Calculate the sum of the marks
+4. Calculate the average as sum / 5
+5. If average >= 75 and <= 90, print "Excellent"
+	Else if average >= 60 and < 75, print "Good"
+	Else if average >= 45 and < 60, print "Pass"
+	Else, print "Fail"
+6. End
+
+Pseudocode:
+
+START
+   PRINT "Enter mark 1: "
+   READ mark1
+   PRINT "Enter mark 2: "
+   READ mark2
+   PRINT "Enter mark 3: "
+   READ mark3
+   PRINT "Enter mark 4: "
+   READ mark4
+   PRINT "Enter mark 5: "
+   READ mark5
+   
+   SET sum = mark1 + mark2 + mark3 + mark4 + mark5
+   SET average = sum / 5
+   
+   IF average >= 75 AND average <= 90 THEN
+      PRINT "Excellent"
+   ELSE IF average >= 60 AND average < 75 THEN
+      PRINT "Good"
+   ELSE IF average >= 45 AND average < 60 THEN
+      PRINT "Pass"
+   ELSE
+      PRINT "Fail"
+   END IF
+END

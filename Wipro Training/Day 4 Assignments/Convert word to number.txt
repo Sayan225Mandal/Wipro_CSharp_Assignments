@@ -1,0 +1,25 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter a number: ");
+        string input = Console.ReadLine();
+        string output = ConvertNumberToWords(input);
+        Console.WriteLine(output);
+    }
+
+    static string ConvertNumberToWords(string number)
+    {
+        string[] words = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+        string result = "";
+
+        foreach (char digit in number)
+        {
+            result += words[digit - '0'] + " ";
+        }
+
+        return result.Trim();
+    }
+}

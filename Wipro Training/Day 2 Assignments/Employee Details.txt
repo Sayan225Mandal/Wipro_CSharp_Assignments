@@ -1,0 +1,56 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+internal class Program
+{
+    static void Main(string[] args)
+    {
+        int employeeId;
+        string name;
+        decimal basicSalary;
+        bool isContractEmployee;
+        int deptNo;
+        string emailId;
+
+        Console.WriteLine("Enter Employee ID: ");
+        employeeId = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Enter Name: ");
+        name = Console.ReadLine();
+
+        Console.WriteLine("Enter Basic Salary: ");
+        basicSalary = decimal.Parse(Console.ReadLine());
+
+        Console.WriteLine("Is Contract Employee (true/false): ");
+        isContractEmployee = bool.Parse(Console.ReadLine());
+
+        Console.WriteLine("Enter Department Number: ");
+        deptNo = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Enter Email ID: ");
+        emailId = Console.ReadLine();
+
+ 
+        decimal HRA = basicSalary * 0.15M;
+        decimal MA = basicSalary * 0.10M;
+        decimal TA = basicSalary * 0.15M;
+
+
+        decimal netSalary = basicSalary + HRA + MA + TA;
+
+
+        Console.WriteLine();
+        Console.WriteLine("------------ Employee Details ----------------------");
+        Console.WriteLine("Employee ID: " + employeeId);
+        Console.WriteLine("Name: " + name);
+        Console.WriteLine("Basic Salary: " + basicSalary);
+        Console.WriteLine("Is Contract Employee: " + isContractEmployee);
+        Console.WriteLine("Department Number: " + deptNo);
+        Console.WriteLine("Email ID: " + emailId);
+        Console.WriteLine("Net Salary: " + netSalary);
+
+        Console.ReadLine();
+    }
+}

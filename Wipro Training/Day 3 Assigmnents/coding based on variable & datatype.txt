@@ -1,0 +1,30 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+internal class Program
+{
+    static void Main(string[] args)
+    {
+        //Declare two integer variables with the maximum value of int
+        int maxInt1 = int.MaxValue;
+        int maxInt2 = int.MaxValue;
+
+        // Use long to add these two values to avoid overflow
+        long result = (long)maxInt1 + maxInt2;
+
+        // Print the result
+        Console.WriteLine($"Sum is: " + result);
+
+        // Check if the result exceeds the maximum value of int
+        if (result > int.MaxValue)
+        {
+            Console.WriteLine("The result exceeds the maximum value of an integer and is stored in a long data type.");
+        }
+        else
+        {
+            Console.WriteLine("The result is within the range of an integer.");
+        }
+    }
+}

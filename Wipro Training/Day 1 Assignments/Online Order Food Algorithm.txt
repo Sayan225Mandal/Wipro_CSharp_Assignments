@@ -1,0 +1,49 @@
+ALGORITHM:-
+
+1. Open the Zomato website (www.zomato.in).
+2. Navigate to the "Menus" section.
+3. Go to the login page.
+   (i)  If you don't have login credentials, sign up first.
+   (ii) After signing up, navigate back to the login page.
+4. Enter your username and password to log in.
+5. Choose a restaurant from the list.
+6. Select the food items you want to order from the restaurant's menu.
+7. Proceed to the payment option.
+8. Pay the amount due.
+9. Receive confirmation of your order and wait for it to be delivered.
+
+
+==================================================================================
+
+
+FLOWCHART:-
+
+  Start
+    |
+  Open www.zomato.in
+    |
+  Navigate to "Menus"
+    |
+  Go to Login Page
+    |
+  Have Login Credentials?
+   /   \
+ No     Yes
+  |      |
+Sign Up  Enter Username & Password
+  |              |
+  Go to Login Page
+         |
+     Choose a Restaurant
+         |
+     Select Food Items
+         |
+     Proceed to Payment
+         |
+       Pay Amount
+         |
+    Order Confirmed
+         |
+   Wait for Delivery
+         |
+         End

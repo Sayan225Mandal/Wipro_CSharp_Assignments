@@ -1,0 +1,54 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        // Course details
+        const double courseFee = 25000;
+        DateTime registrationDeadline = new DateTime(2024, 6, 20);
+        DateTime specialCourseDate = new DateTime(2024, 6, 25);
+
+        // Input subscriber details
+        Console.Write("Enter subscriber name: ");
+        string subscriberName = Console.ReadLine();
+
+        Console.Write("Enter subscriber email: ");
+        string email = Console.ReadLine();
+
+        Console.Write("Enter registration date (MM/dd/yyyy): ");
+        DateTime registrationDate = DateTime.Parse(Console.ReadLine());
+
+        // Calculate discount or late fee
+        double discount = 0;
+        double lateFee = 0;
+
+        if (registrationDate <= new DateTime(2024, 6, 10))
+        {
+            discount = 0.15;
+        }
+        else if (registrationDate <= new DateTime(2024, 6, 15))
+        {
+            discount = 0.10;
+        }
+        else if (registrationDate > registrationDeadline)
+        {
+            lateFee = 0.05;
+        }
+
+        double finalFee = courseFee - (courseFee * discount) + (courseFee * lateFee);
+
+        // Display subscriber details
+        Console.WriteLine("\n=================Subscriber Details =====================");
+        Console.WriteLine($"Name: " + subscriberName);
+        Console.WriteLine($"Email: " + email);
+        Console.WriteLine($"Registration Date: " + registrationDate.ToShortDateString());
+        Console.WriteLine($"Course Fee: " + courseFee);
+        Console.WriteLine($"Discount: " + discount * 100 +"%");
+        Console.WriteLine($"Late Fee: " + lateFee * 100 + "%");
+        Console.WriteLine($"Final Amount to be Paid: " + finalFee);
+    }
+}

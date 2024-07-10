@@ -1,0 +1,53 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+internal class Program
+{
+    static void Main(string[] args)
+    {
+        const int pizzaPrice = 300;
+        const int puffPrice = 50;
+        const int pepsiPrice = 130;
+        const double gstRate = 0.09;
+        const double cessRate = 0.09;
+
+        int noOfPizzas;
+        int noOfPuffs;
+        int noOfPepsis;
+
+        Console.WriteLine("Enter the number of pizzas: ");
+        noOfPizzas = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Enter the number of puffs: ");
+        noOfPuffs = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Enter the number of pepsis: ");
+        noOfPepsis = int.Parse(Console.ReadLine());
+
+
+        int totalCostPizzas = noOfPizzas * pizzaPrice;
+        int totalCostPuffs = noOfPuffs * puffPrice;
+        int totalCostPepsis = noOfPepsis * pepsiPrice;
+
+
+        int grandTotal = totalCostPizzas + totalCostPuffs + totalCostPepsis;
+
+
+        double gstAmount = grandTotal * gstRate;
+        double cessAmount = grandTotal * cessRate;
+
+
+        Console.WriteLine();
+        Console.WriteLine("------------ Bill Details ----------------------");
+        Console.WriteLine("Total cost of Pizzas: Rs. " + totalCostPizzas);
+        Console.WriteLine("Total cost of Puffs: Rs. " + totalCostPuffs);
+        Console.WriteLine("Total cost of Pepsis: Rs. " + totalCostPepsis);
+        Console.WriteLine("Grand Total: Rs. " + grandTotal);
+        Console.WriteLine("GST Amount (9%): Rs. " + gstAmount);
+        Console.WriteLine("CESS Amount (9%): Rs. " + cessAmount);
+
+        Console.ReadLine();
+    }
+}

@@ -1,0 +1,17 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int a = 0, b = 1, temp;
+        Console.Write(a + " " + b + " ");
+        for (int i = 3; i <= 13; i++)
+        {
+            temp = a + b;
+            Console.Write(temp + " ");
+            a = b;
+            b = temp;
+        }
+    }
+}

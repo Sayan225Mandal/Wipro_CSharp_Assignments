@@ -1,0 +1,53 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+internal class Program
+{
+    static void Main(string[] args)
+    {
+        // Read product information
+        Console.Write("Enter product ID: ");
+        int productId = int.Parse(Console.ReadLine());
+
+        Console.Write("Enter product name: ");
+        string productName = Console.ReadLine();
+
+        Console.Write("Enter unit price: ");
+        double unitPrice = double.Parse(Console.ReadLine());
+
+        Console.Write("Enter quantity: ");
+        int quantity = int.Parse(Console.ReadLine());
+
+        // Calculate total amount
+        double totalAmount = unitPrice * quantity;
+
+        // Apply discount based on conditions
+        double discount = 0;
+        if (totalAmount > 5000)
+        {
+            discount = 0.20;
+        }
+        else if (totalAmount > 3000)
+        {
+            discount = 0.15;
+        }
+        else if (totalAmount > 1000)
+        {
+            discount = 0.10;
+        }
+
+        double discountAmount = totalAmount * discount;
+        double finalAmount = totalAmount - discountAmount;
+
+        // Display the result
+        Console.WriteLine("Product ID: " + productId);
+        Console.WriteLine("Product Name: " + productName);
+        Console.WriteLine("Unit Price: " + unitPrice);
+        Console.WriteLine("Quantity: " + quantity);
+        Console.WriteLine("Total Amount: " + totalAmount);
+        Console.WriteLine("Discount: " + discount * 100);
+        Console.WriteLine("Final Amount after Discount: " + finalAmount);
+    }
+}

@@ -1,0 +1,39 @@
+1. Significance of Scope of the Variable and Different Scope Options in C#
+Significance of Scope of the Variable:
+
+Scope refers to the visibility and lifetime of a variable within a program.
+Visibility: Determines where the variable can be accessed or modified.
+Lifetime: Determines how long the variable exists in memory.
+Properly managing scope ensures variables are accessible where needed and prevents accidental modification or misuse.
+
+Different Scope Options in C#:
+
+Local Scope: Variables declared inside a method or block. Accessible only within that method or block.
+
+Parameter Scope: Variables declared as parameters in a method signature. Accessible only within that method.
+
+Class-Level (Instance) Scope: Variables declared inside a class but outside any method. Accessible by all methods within the class.
+
+Static Scope: Variables declared with the static keyword inside a class. Accessible by all methods within the class and shared among all instances of the class.
+
+Namespace Scope: Variables declared outside any class, struct, or method, within a namespace. Not common practice, but accessible throughout the namespace.
+
+========================================================================================================
+
+2. Difference between a Variable and a Constant
+Variable:
+
+A storage location identified by a memory address and a symbolic name (an identifier), which contains some known or unknown quantity of information referred to as a value.
+The value of a variable can change during program execution.
+
+Constant:
+
+A value that cannot be altered by the program during its execution. It remains the same throughout the lifetime of the program.
+Declared using the const keyword in C#.
+
+========================================================================================================
+
+3. Maximum Value that can be Stored in an Integer Variable in C#
+In C#, the int type is a 32-bit signed integer.
+The maximum value it can hold is 2,147,483,647.
+This can be represented using the int.MaxValue constant.

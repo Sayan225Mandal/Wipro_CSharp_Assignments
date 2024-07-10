@@ -1,0 +1,22 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        double totalAmount = 0;
+
+        for (int i = 1; i <= 5; i++)
+        {
+            Console.Write("Enter price for product " + i + ": ");
+            double price = double.Parse(Console.ReadLine());
+
+            Console.Write("Enter quantity for product " + i + ": ");
+            int quantity = int.Parse(Console.ReadLine());
+
+            totalAmount += price * quantity;
+        }
+
+        Console.WriteLine("Total amount for all products: " + totalAmount);
+    }
+}

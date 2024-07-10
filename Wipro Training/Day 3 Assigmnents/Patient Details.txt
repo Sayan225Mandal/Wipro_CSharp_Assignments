@@ -1,0 +1,60 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        // Variables to store patient details
+        int patientId;
+        string firstName;
+        string lastName;
+        int age;
+        string gender;
+        bool isInsured;
+        double weight;
+        DateTime admissionDate;
+        string diagnosis;
+
+        // Input patient details
+        Console.Write("Enter patient ID: ");
+        patientId = int.Parse(Console.ReadLine());
+
+        Console.Write("Enter first name: ");
+        firstName = Console.ReadLine();
+
+        Console.Write("Enter last name: ");
+        lastName = Console.ReadLine();
+
+        Console.Write("Enter age: ");
+        age = int.Parse(Console.ReadLine());
+
+        Console.Write("Enter gender: ");
+        gender = Console.ReadLine();
+
+        Console.Write("Is the patient insured? (true/false): ");
+        isInsured = bool.Parse(Console.ReadLine());
+
+        Console.Write("Enter weight (kg): ");
+        weight = double.Parse(Console.ReadLine());
+
+        Console.Write("Enter admission date (MM/dd/yyyy): ");
+        admissionDate = DateTime.Parse(Console.ReadLine());
+
+        Console.Write("Enter diagnosis: ");
+        diagnosis = Console.ReadLine();
+
+        // Display patient details
+        Console.WriteLine("\nPatient Details:");
+        Console.WriteLine("ID: " + patientId);
+        Console.WriteLine("Name: " + firstName + " " + lastName);
+        Console.WriteLine("Age: " + age);
+        Console.WriteLine("Gender: " + gender);
+        Console.WriteLine("Insured: " + isInsured);
+        Console.WriteLine("Weight: " + weight + " kg");
+        Console.WriteLine("Admission Date: " + admissionDate.ToShortDateString());
+        Console.WriteLine("Diagnosis: " + diagnosis);
+    }
+}
