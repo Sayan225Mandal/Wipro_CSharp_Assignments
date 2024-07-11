@@ -1,0 +1,20 @@
+using System;
+
+class PrintWordsProgram
+{
+    static void PrintWords(string input)
+    {
+        string[] words = input.Split(' ');
+        foreach (string word in words)
+        {
+            Console.WriteLine(word);
+        }
+    }
+
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Enter a string:");
+        string input = Console.ReadLine();
+        PrintWords(input);
+    }
+}

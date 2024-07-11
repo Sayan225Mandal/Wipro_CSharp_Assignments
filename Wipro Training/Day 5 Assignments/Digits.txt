@@ -1,0 +1,27 @@
+using System;
+
+class SumOfAlternateDigitsProgram
+{
+    static int SumOfAlternateDigits(int number)
+    {
+        string numStr = number.ToString();
+        if (numStr.Length != 5)
+        {
+            throw new ArgumentException("The number must be a 5-digit number.");
+        }
+
+        int sum = 0;
+        for (int i = 0; i < numStr.Length; i += 2)
+        {
+            sum += int.Parse(numStr[i].ToString());
+        }
+        return sum;
+    }
+
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Enter a 5-digit number:");
+        int number = int.Parse(Console.ReadLine());
+        Console.WriteLine("Sum of alternate digits in " + number + ": " + SumOfAlternateDigits(number));
+    }
+}

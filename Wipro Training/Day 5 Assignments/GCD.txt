@@ -1,0 +1,23 @@
+using System;
+
+class GCDProgram
+{
+    static int GCD(int a, int b)
+    {
+        while (b != 0)
+        {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
+
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Enter two numbers to find their GCD:");
+        int a = int.Parse(Console.ReadLine());
+        int b = int.Parse(Console.ReadLine());
+        Console.WriteLine("GCD of " + a + " and " + b + ": " + GCD(a, b));
+    }
+}

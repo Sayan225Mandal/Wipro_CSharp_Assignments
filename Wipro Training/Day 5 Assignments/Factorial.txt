@@ -1,0 +1,21 @@
+using System;
+
+class FactorialProgram
+{
+    static int Factorial(int number)
+    {
+        int result = 1;
+        for (int i = 1; i <= number; i++)
+        {
+            result *= i;
+        }
+        return result;
+    }
+
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Enter a number to find its factorial:");
+        int number = int.Parse(Console.ReadLine());
+        Console.WriteLine("Factorial of " + number + ": " + Factorial(number));
+    }
+}
