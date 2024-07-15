@@ -1,0 +1,47 @@
+using System;
+
+public class PatientDetails
+{
+    // Properties
+    public int PatientId { get; set; }
+    public string PatientName { get; set; }
+    public int Age { get; set; }
+    public string Gender { get; set; }
+    public string Address { get; set; }
+    public string ContactNumber { get; set; }
+    public bool IsAdmitted { get; set; }
+    public double Height { get; set; }
+    public double Weight { get; set; }
+    public DateTime AdmissionDate { get; set; }
+
+    // Method to display details
+    public void ShowDetails()
+    {
+        Console.WriteLine($"Patient Details :: Id : {PatientId}, Name : {PatientName}, Age : {Age}, Gender : {Gender}, " +
+                          $"Address : {Address}, Contact : {ContactNumber}, Admitted : {IsAdmitted}, " +
+                          $"Height : {Height}, Weight : {Weight}, Admission Date : {AdmissionDate}");
+    }
+}
+
+// Main program
+public class Program
+{
+    public static void Main()
+    {
+        PatientDetails patient = new PatientDetails
+        {
+            PatientId = 1,
+            PatientName = "John Doe",
+            Age = 30,
+            Gender = "Male",
+            Address = "123 Main St",
+            ContactNumber = "555-1234",
+            IsAdmitted = true,
+            Height = 5.9,
+            Weight = 75.5,
+            AdmissionDate = DateTime.Now
+        };
+
+        patient.ShowDetails();
+    }
+}

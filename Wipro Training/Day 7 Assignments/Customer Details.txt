@@ -1,0 +1,72 @@
+using System;
+
+public class Customer
+{
+    // Private fields
+    private int customerId;
+    private string customerName;
+    private string customerCity;
+
+    // Properties
+    public int CustomerId
+    {
+        get { return customerId; }
+        set { customerId = value; }
+    }
+    
+    public string CustomerName
+    {
+        get { return customerName; }
+        set { customerName = value; }
+    }
+    
+    public string CustomerCity
+    {
+        get { return customerCity; }
+        set { customerCity = value; }
+    }
+
+    // Constructors
+    public Customer() {}
+
+    public Customer(int id)
+    {
+        this.customerId = id;
+    }
+
+    public Customer(int id, string name)
+    {
+        this.customerId = id;
+        this.customerName = name;
+    }
+
+    public Customer(int id, string name, string city)
+    {
+        this.customerId = id;
+        this.customerName = name;
+        this.customerCity = city;
+    }
+
+    // Method to display details
+    public void ShowDetails()
+    {
+        Console.WriteLine($"Customer Details :: Id : {CustomerId}, Name : {CustomerName}, City : {CustomerCity}");
+    }
+}
+
+// Main program
+public class Program
+{
+    public static void Main()
+    {
+        Customer c1 = new Customer();
+        Customer c2 = new Customer(10256);
+        Customer c3 = new Customer(10256, "Scott");
+        Customer c4 = new Customer(10256, "Scott", "Hyd");
+
+        c1.ShowDetails();
+        c2.ShowDetails();
+        c3.ShowDetails();
+        c4.ShowDetails();
+    }
+}

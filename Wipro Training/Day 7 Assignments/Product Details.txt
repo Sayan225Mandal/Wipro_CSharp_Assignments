@@ -1,0 +1,36 @@
+using System;
+
+public class Product
+{
+    // Auto-implemented properties
+    public int ProductId { get; }
+    public string ProductName { get; set; }
+    public decimal UnitPrice { get; set; }
+    public int Quantity { get; set; }
+
+    // Constructor
+    public Product(int productId)
+    {
+        this.ProductId = productId;
+    }
+
+    // Method to display details
+    public void ShowDetails()
+    {
+        Console.WriteLine($"Product Details :: Id : {ProductId}, Name : {ProductName}, Unit Price : {UnitPrice}, Quantity : {Quantity}");
+    }
+}
+
+// Main program
+public class Program
+{
+    public static void Main()
+    {
+        Product p1 = new Product(101);
+        p1.ProductName = "Laptop";
+        p1.UnitPrice = 1500.50m;
+        p1.Quantity = 10;
+
+        p1.ShowDetails();
+    }
+}
