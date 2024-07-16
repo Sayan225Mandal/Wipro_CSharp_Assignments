@@ -1,0 +1,31 @@
+using System;
+
+public class Program
+{
+    public static void Main()
+    {
+        string[] array = { "Books", "Pens", "Charts" };
+        string result = ConvertToCSV(array);
+        Console.WriteLine(result);
+    }
+
+    public static string ConvertToCSV(string[] array)
+    {
+        if (array == null || array.Length == 0)
+        {
+            return string.Empty;
+        }
+
+        string csv = "";
+        for (int i = 0; i < array.Length; i++)
+        {
+            csv += array[i];
+            if (i < array.Length - 1)
+            {
+                csv += ", ";
+            }
+        }
+
+        return csv;
+    }
+}

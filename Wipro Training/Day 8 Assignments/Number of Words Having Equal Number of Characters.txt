@@ -1,0 +1,70 @@
+using System;
+
+public class Program
+{
+    public static void Main()
+    {
+        string input1 = "Hi How are you";
+        string input2 = "You are best thing";
+        string input3 = "Practice makes man perfect";
+
+        Console.WriteLine($"Input: {input1} \nOutput: {CountEqualLengthWords(input1)}");
+        Console.WriteLine($"Input: {input2} \nOutput: {CountEqualLengthWords(input2)}");
+        Console.WriteLine($"Input: {input3} \nOutput: {CountEqualLengthWords(input3)}");
+    }
+
+    public static int CountEqualLengthWords(string input)
+    {
+        string[] words = SplitWords(input);
+        int count = 0;
+
+        foreach (string word in words)
+        {
+            if (word.Length == 3)
+            {
+                count++;
+            }
+        }
+
+        return count;
+    }
+
+    public static string[] SplitWords(string input)
+    {
+        if (string.IsNullOrEmpty(input))
+        {
+            return new string[0];
+        }
+
+        string[] words = new string[input.Length];
+        int wordIndex = 0;
+        string word = "";
+
+        foreach (char c in input)
+        {
+            if (char.IsWhiteSpace(c))
+            {
+                if (word.Length > 0)
+                {
+                    words[wordIndex++] = word;
+                    word = "";
+                }
+            }
+            else
+            {
+                word += c;
+            }
+        }
+
+        // Add the last word if exists
+        if (word.Length > 0)
+        {
+            words[wordIndex++] = word;
+        }
+
+        // Trim the array to the actual number of words
+        Array.Resize(ref words, wordIndex);
+
+        return words;
+    }
+}
