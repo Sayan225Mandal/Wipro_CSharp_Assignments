@@ -1,0 +1,48 @@
+using System;
+using System.Collections.Generic;
+
+public class CustomerList
+{
+    private Dictionary<string, List<string>> customersByPlan;
+
+    public CustomerList()
+    {
+        customersByPlan = new Dictionary<string, List<string>>();
+    }
+
+    // Method to add a new customer name based on the given plan
+    public void AddCustomer(string plan, string customerName)
+    {
+        if (!customersByPlan.ContainsKey(plan))
+        {
+            customersByPlan[plan] = new List<string>();
+        }
+        customersByPlan[plan].Add(customerName);
+    }
+
+    // Method to display customers
+    public void DisplayCustomers()
+    {
+        foreach (var plan in customersByPlan)
+        {
+            Console.WriteLine($"Plan: {plan.Key}");
+            foreach (var customer in plan.Value)
+            {
+                Console.WriteLine($"  Customer: {customer}");
+            }
+        }
+    }
+}
+
+// Main program
+public class Program
+{
+    public static void Main()
+    {
+        CustomerList customerList = new CustomerList();
+        customerList.AddCustomer("Basic", "John Doe");
+        customerList.AddCustomer("Basic", "Jane Doe");
+        customerList.AddCustomer("Premium", "Alice Smith");
+        customerList.DisplayCustomers();
+    }
+}
